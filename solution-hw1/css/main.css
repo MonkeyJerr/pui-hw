@@ -1,0 +1,80 @@
+.logoDimensions {
+    width: 30vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.title {
+    text-alignment: center;
+}
+
+hr {
+    border: 5px solid black;
+    background-color: black;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.title2{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.title3{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 30px;
+
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.productDescription {
+    margin: 10px;
+    font-size: 25px;
+    line-height: 1;
+}
+
+.flex-col-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.productsImg{
+    border: 5px solid black;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+
+}
+
+.medium-paddingtop {
+    padding-top: 25px;
+}
+
+.hover-highlight:hover{
+    background-color: yellow;
+}
