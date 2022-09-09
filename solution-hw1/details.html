@@ -8,12 +8,14 @@
   <title>Product Details</title>
   
   <body>
+    <!-- Header with logo -->
 
     <a href="./index.html">
       <img src="logo/logo-01.svg" alt="logo" class="logoDimensions"/>
     </a>
     <hr>
 
+    <!-- Gallery and Cart Links -->
     <a href="./index.html">
       <h1 class="title bold"><mark>PRODUCTS</mark></h1>
     </a>
@@ -21,12 +23,15 @@
         <h2 class="title light">CART</h2>
     </a>
 
-      <div class="flex-col medium-paddingtop">
+    <div class="flex-col medium-paddingtop">
+        <!-- Product Image -->
         <h1 class="subtitle">Original Cinnamon Roll</h1>
         <div>
           <img src="products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll" class="detailsImg"/>\
         </div>
         <p class="align-left productDescription">Customize our delicious,<br>hand-made cinnamon roll to<br>your liking!</p>
+
+        <!-- Dropdown #1 -->
         <div class="medium-paddingtop">
           <label for="glazing" class="productDescription">Glazing:</label><br>
           <select name="glazing" id="glazing" class="dropdowns">
@@ -37,6 +42,8 @@
 
           </select>
         </div>
+
+        <!-- Dropdown #2 -->
         <div>
           <label for="pack-size" class="productDescription">Pack Size: </label><br>
           <select name="pack-size" id="pack-size" class="dropdowns">
@@ -48,13 +55,14 @@
           </select>
         </div>
 
+        <!-- Footer Section with price and button -->
         <div class="flex-row mid-gap medium-paddingtop">
           <span class="detailsPrice">$ 2.49</span>
           <button class="cartButton">Add to Cart</button>
         </div>
       
 
-      </div>
+    </div>
 
 
   </body>
