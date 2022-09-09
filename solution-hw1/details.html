@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexander Ma">
+  <meta name="description" content="A website page for a specific product's details">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cart.css">
+
+  <title>Product Details</title>
+  
+  <body>
+
+    <a href="./index.html">
+      <img src="logo/logo-01.svg" alt="logo" class="logoDimensions"/>
+    </a>
+    <hr>
+
+    <a href="./index.html">
+      <h1 class="title bold"><mark>PRODUCTS</mark></h1>
+    </a>
+    <a href="./cart.html">
+        <h2 class="title light">CART</h2>
+    </a>
+
+      <div class="flex-col medium-paddingtop">
+        <h1 class="subtitle">Original Cinnamon Roll</h1>
+        <div>
+          <img src="products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll" class="detailsImg"/>\
+        </div>
+        <p class="align-left productDescription">Customize our delicious,<br>hand-made cinnamon roll to<br>your liking!</p>
+        <div class="medium-paddingtop">
+          <label for="glazing" class="productDescription">Glazing:</label><br>
+          <select name="glazing" id="glazing" class="dropdowns">
+            <option value="original">Keep Original</option>
+            <option value="sugar-milk">Sugar Milk</option>
+            <option value="vanilla-milk">Vanilla Milk</option>
+            <option value="double-chocolate">Double Chocolate</option>
+
+          </select>
+        </div>
+        <div>
+          <label for="pack-size" class="productDescription">Pack Size: </label><br>
+          <select name="pack-size" id="pack-size" class="dropdowns">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+
+          </select>
+        </div>
+
+        <div class="flex-row mid-gap medium-paddingtop">
+          <span class="detailsPrice">$ 2.49</span>
+          <button class="cartButton">Add to Cart</button>
+        </div>
+      
+
+      </div>
+
+
+  </body>
+</html>

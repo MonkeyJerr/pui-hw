@@ -4,33 +4,44 @@
     padding-bottom: 2vw;
 }
 
-.title {
-    text-alignment: center;
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
 }
 
 hr {
-    border: 5px solid black;
+    border: 4px solid black;
     background-color: black;
 }
 
 .title{
     text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 25px;
+    color: black;
 }
-
-.title2{
-    text-align: center;
-    font-weight: lighter;
-}
-
-.title3{
+.subtitle{
     text-align: center;
     font-weight: lighter;
     font-size: 30px;
 
 }
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
 
 #content {
     display: flex;
@@ -58,13 +69,14 @@ hr {
     line-height: 1;
 }
 
-.flex-col-inner {
+.flex-col-noGap {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .productsImg{
-    border: 5px solid black;
+    border: 4px solid black;
     width: 250px;
     height: 250px;
     margin: 10px;
@@ -78,3 +90,66 @@ hr {
 .hover-highlight:hover{
     background-color: yellow;
 }
+
+/* unique css for the details page*/
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.mid-gap{
+    gap: 40px;
+}
+
+
+.dropdowns {
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+.detailsImg {
+    height: 550px;
+    width: 550px;
+    border: 4px solid black;
+}
+.detailsPrice {
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* unique css for the cart page*/
+
+.cartButton {
+    background: yellow;
+    height: 50px;
+    width: 175px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.cartDescription {
+    margin: 10px;
+    font-size: 25px;
+    line-height: .5;
+}
+
+.cartPrice {
+    font-size: 30px;
+}
+
+.cartLine {
+    width: 50%;
+}
+
+.cartImg {
+    height: 110px;
+    width: 110px;
+    border: 4px solid black;
+}
+
