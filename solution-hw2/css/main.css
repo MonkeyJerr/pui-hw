@@ -118,12 +118,6 @@ a:visited {
     grid-template-columns: max-content max-content max-content;
 }
 
-
-#content {
-    display: flex;
-    justify-content: center;
-}
-
 .flex-col-gallery {
     display: flex;
     flex-direction: column;
@@ -249,7 +243,6 @@ a:visited {
     font-size: 30px;
     float: right;
 }
-
 
 
 .cart-img {
