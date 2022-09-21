@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexander Ma">
+  <meta name="description" content="A website page for a specific product's details">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <script src="js/product-details.js" defer></script>
+  <title>Product Details</title>
+  
+  <body>
+    <!-- Header with logo -->
+    
+    <div class="flex-row">
+      <a href="./index.html">
+        <img src="logo/logo-01.svg" alt="logo" class="logoDimensions"/>
+      </a>
+      <div class="flex-col-nav width-full medium-paddingtop small-paddingleft">
+        <div class="flex-row nav-bar">
+          <a href="./index.html">
+            <h1 class="title bold"><mark>PRODUCTS</mark></h1>
+          </a>
+          <a href="./cart.html">
+              <h1 class="title light">CART</h1>
+          </a> 
+        </div>
+        <hr class="width-full">
+        <h2 class="subtitle flex-col-nav home-title">Original cinnamon roll</h2>
+      </div>
+    </div>
+  <div class="flex-col-center">
+    <div class="flex-row-detail medium-paddingtop">
+        <!-- Product Image -->
+        <div>
+          <img src="products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll" class="detailsImg"/>\
+        </div>
+        <div class="detail-description">
+          <p class="product-description">Customize our delicious,<br>hand-made cinnamon roll to<br>your liking!</p>
+
+          <!-- Dropdown #1 -->
+          <div class="medium-paddingtop">
+            <label for="glazing" class="product-description">Glazing:</label><br>
+            <select name="glazing" id="glazing-dropdown" class="dropdowns" onchange="updateDetailPrice()">
+            </select>
+          </div>
+
+          <!-- Dropdown #2 -->
+          <div>
+            <label for="pack-size" class="product-description">Pack Size: </label><br>
+            <select name="pack-size" id="packing-dropdown" class="dropdowns" onchange="updateDetailPrice()">
+            </select>
+          </div>
+
+          <!-- Footer Section with price and button -->
+          <div class="flex-row mid-gap large-paddingtop">
+            <span id="detailsPrice" class="detailsPrice">$ 2.49</span>
+            <button class="cartButton">Add to Cart</button>
+          </div>
+        </div>
+      
+
+    </div>
+
+  </div>
+  </body>
+</html>
