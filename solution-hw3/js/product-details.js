@@ -1,5 +1,6 @@
 const original_cinnamon_roll_price = 2.49;
 
+/* creating objects for each option in the dropdown */
 const keep_original = {
     name: "Keep Original",
     value: "0",
@@ -47,13 +48,14 @@ const pack_size12 = {
     price_multiple: 10
 };
 
+/* arrays to loop through so you can add each object to dropdown */
 const glazing_options = [keep_original, sugar_milk, vanilla_milk, double_chocolate];
 const packing_options = [pack_size1, pack_size3, pack_size6, pack_size12]
 
-
+/* get the dropdown from DOM */
 let glazing_dropdown = document.getElementById("glazing-dropdown");
-console.log(glazing_dropdown);
 
+/* create an option element and then add each object to dropdown */
 for (let i = 0; i < glazing_options.length; i++) {
     let glaze_option = document.createElement("option");
     glaze_option.text = glazing_options[i].name;
@@ -69,6 +71,7 @@ for (let i = 0; i < packing_options.length; i++) {
     packing_dropdown.add(pack_option);
 }
 
+/* update price by getting the object the user is selecting */
 function updateDetailPrice() {
     let price;
     let glazing_selected = glazing_dropdown.selectedIndex;
@@ -76,5 +79,5 @@ function updateDetailPrice() {
     price = (original_cinnamon_roll_price + glazing_options[glazing_selected].price_change) * packing_options[pack_selected].price_multiple;
     console.log(packing_options[pack_selected].price_change);
     detail_price = document.getElementById("detailsPrice");
-    detail_price.innerHTML = price.toFixed(2);
+    detail_price.innerHTML = "$ " + price.toFixed(2);
 }
