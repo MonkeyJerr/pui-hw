@@ -25,6 +25,21 @@ const rolls = {
     }
 };
 
+const glazingExtra = {
+    "Original": {
+        "add": 0
+    },
+    "Sugar Milk": {
+        "add": 0
+    },
+    "Vanilla Milk": {
+        "add": .50
+    },
+    "Double Chocolate": {
+        "add": 1.50
+    }
+};
+
 const packSizeMultiple = {
     "1": {
         "multiple": 1

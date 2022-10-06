@@ -5,7 +5,8 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
-        this.calcPrice = basePrice * packSizeMultiple[packSize].multiple;
+        // get the calculated price by getting multiple from rollsData.js
+        this.calcPrice = (basePrice + glazingExtra[rollGlazing].add) * packSizeMultiple[packSize].multiple;
 
         this.element = null;
     }
@@ -49,7 +50,7 @@ function createElement(roll) {
 }
 
 function updateElement(roll) {
-    // get the HTML elements that need updating
+    // get the HTML elements with the roll that need to be updated
     const cartImage = roll.element.querySelector('.cart-img');
     const cartName = roll.element.querySelector('.cart-name');
     const cartGlazing = roll.element.querySelector('.cart-glazing');
@@ -66,9 +67,9 @@ function updateElement(roll) {
 
 
   function deleteRoll(roll) {
-    // remove the notecard DOM object from the UI
+    // remove the roll from DOM
     roll.element.remove();
-    // remove the actual Notecard object from our set of notecards
+    // remove the actual roll from set
     cartSet.delete(roll);
     console.log(cartSet);
   }
