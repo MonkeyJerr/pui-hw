@@ -94,31 +94,42 @@ function updateDetailPrice() {
     let glazing_selected = glazing_dropdown.selectedIndex;
     let pack_selected = packing_dropdown.selectedIndex;
     price = (rolls[rollType].basePrice + glazing_options[glazing_selected].price_change) * packing_options[pack_selected].price_multiple;
-    console.log(packing_options[pack_selected].price_change);
     detail_price.innerHTML = "$ " + price.toFixed(2);
 }
-let glazing_selected = glazing_dropdown.selectedIndex;
-let pack_selected = packing_dropdown.selectedIndex;
-
 
 const cart = [];
+//take JSON objects stored in localstorage
+//parse the stored cart so you can get inidividual objects
+//add each object from parsed cart into array
+if (localStorage.getItem('storedCart') != null) {
+    let storedCartItem = localStorage.getItem('storedCart');
+    let parsedCart = JSON.parse(storedCartItem);
+    for (key in parsedCart) {
+        let item = parsedCart[key];
+        cart.push(item);
+    }
+}
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
-
-        this.element = null;
     }
 }
 
 function addToCart() {
+    let glazing_selected = glazing_dropdown.selectedIndex;
+    let pack_selected = packing_dropdown.selectedIndex;
     const newRoll = new Roll(rollType, glazing_options[glazing_selected].name, packing_options[pack_selected].name, rolls[rollType].basePrice);
     cart.push(newRoll);
-    console.log(JSON.stringify(cart));
+    let cartArrayString = JSON.stringify(cart);
+    localStorage.setItem('storedCart', cartArrayString);
+    console.log(localStorage.getItem('storedCart'));
 
 }
+
+
 
 
 

@@ -26,7 +26,7 @@ const rolls = {
 };
 
 const glazingExtra = {
-    "Original": {
+    "Keep Original": {
         "add": 0
     },
     "Sugar Milk": {

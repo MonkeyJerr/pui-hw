@@ -16,14 +16,29 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
-
 //set that represents the cart
 const cartSet = new Set();
 
+function retrieveFromLocalStorage() {
+  const cartArrayString = localStorage.getItem('storedCart');
+  const cartArray = JSON.parse(cartArrayString);
+    for (const cartData of cartArray) {
+    const cartItem = addNewRoll(cartData.type, cartData.glazing,
+      cartData.size, cartData.basePrice);
+    createElement(cartItem);
+  }
+}
+
+if (localStorage.getItem('storedCart') != null) {
+  retrieveFromLocalStorage();
+}
+
+
+
 function addNewRoll(rollType, rollGlazing, packSize, basePrice) {
     // Create a new roll object
+
     const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
-  
     // Add the roll object to the cart set, which keeps track of all
     // the rolls in our application
     cartSet.add(newRoll);
@@ -71,34 +86,12 @@ function updateElement(roll) {
     roll.element.remove();
     // remove the actual roll from set
     cartSet.delete(roll);
-    console.log(cartSet);
+    const cartArray = Array.from(cartSet);
+    const cartArrayString = JSON.stringify(cartArray);
+    localStorage.setItem('storedCart', cartArrayString);
+    console.log(localStorage.getItem('storedCart'));
+
   }
-
-  //the four rolls we were asked to add to the cart
-  const rollOne = addNewRoll(
-    "Original",
-    "Sugar Milk",
-    1,
-    2.49
-  );
-  const rollTwo = addNewRoll(
-    "Walnut",
-    "Vanilla Milk",
-    12,
-    3.49
-  );
-
-  const rollThree = addNewRoll(
-    "Raisin", "Sugar Milk", 3, 2.99
-  );
-
-  const rollFour = addNewRoll(
-    "Apple", "Original", 3, 3.49
-  );
-  
-  for (const roll of cartSet) {
-    createElement(roll);
-  };
 
 
 //set total price at the beginning based on what's in the cart
