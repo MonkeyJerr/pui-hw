@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexander Ma's Portfolio Website</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/main.js" defer></script>
+
+    <!-- JS Query for Navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+  <!-- Nav Bar -->
+  <div id="navigation"></div>
+    <script> 
+        $(function(){
+            $("#navigation").load("nav.html"); 
+        });
+    </script>
+
+  <body>
+    <img src="img/shapes/Rectangle.png" alt="Rectangle" class="rectangle"/>
+    <img src="img/shapes/Bean.png" alt="Bean" class="bean"/>
+    <img src="img/shapes/Ellipse.png" alt="Ellipse" class="ellipse"/>
+    <img src="img/shapes/Arrow.png" alt="Arrow" class="arrow"/>
+
+    <!-- The intro text -->
+    <div class="intro-container">
+        <h1 class="lato-regular">Welcome! I'm Alexander Ma, a student at Carnegie Mellon <br> and a
+            <span
+            class="txt-rotate lato-bold"
+            data-period="2000"
+            data-rotate='[ "UX Designer.", "Frontend Developer.", "Taylor Swift Enthusiast :)" ]'></span>
+        </h1>
+    </div>
+  
+    <!-- The body of projects -->
+    <div class="project-container">
+        <div class="right-container">
+            <div>
+                <img src="img/Project1Img.png" alt="GenderImg"/>
+            </div>
+            <div class="right-text-container">
+                <div class="project-heading lato-bold">Open Source Diversity Website</div>
+                <div class="project-subheading lato-regular small-padding-top">Web Design</div>
+                <div class="project-subheading lato-regular medium-padding-top">Website created using HTML, CSS and JavaScript that provides a comprehensive overview for trends in diversity for open-source software through interactive graphs and captivating visuals</div>
+                <div class="project-subheading lato-regular medium-padding-top">September 2022</div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="left-text-container">
+                <div class="project-heading lato-bold">JamSesh Application</div>
+                <div class="project-subheading lato-regular small-padding-top">Application Design</div>
+                <div class="project-subheading lato-regular medium-padding-top">An application made with ReactJS for users to visualize personal Spotify data, including top tracks, artists, and genres using the Spotify Web API.</div>
+                <div class="project-subheading lato-regular medium-padding-top">September 2022</div>
+            </div>
+            <div>
+                <img src="img/SpotifyImg.png" alt="SpotifyImg"/>
+            </div>
+        </div>
+        <div class="right-container">
+            <div id="GroupCation">
+                <img src="img/GroupcationImg.png" alt="GroupcationImg"/>
+            </div>
+            <div class="right-text-container">
+                <div class="project-heading lato-bold">GroupCation</div>
+                <div class="project-subheading lato-regular small-padding-top">UX Research/Design</div>
+                <div class="project-subheading lato-regular medium-padding-top">A concept for a trip planning application to make organizing road trips infinitely easier, designed after extensive user research on trip planning</div>
+                <div class="project-subheading lato-regular medium-padding-top">September 2022</div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

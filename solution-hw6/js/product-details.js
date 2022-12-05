@@ -122,6 +122,7 @@ function addToCart() {
     let glazing_selected = glazing_dropdown.selectedIndex;
     let pack_selected = packing_dropdown.selectedIndex;
     const newRoll = new Roll(rollType, glazing_options[glazing_selected].name, packing_options[pack_selected].name, rolls[rollType].basePrice);
+    // store in localstorage when you add to cart
     cart.push(newRoll);
     let cartArrayString = JSON.stringify(cart);
     localStorage.setItem('storedCart', cartArrayString);

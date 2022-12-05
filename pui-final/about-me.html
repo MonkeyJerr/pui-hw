@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexander Ma's Portfolio Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about-me.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="js/main.js" defer></script>
+
+
+    <!-- JS Query for Navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+  <!-- Nav Bar -->
+  <div id="navigation"></div>
+    <script> 
+        $(function(){
+            $("#navigation").load("nav.html"); 
+        });
+    </script>
+
+  <body>
+    <img src="img/shapes/Rectangle.png" alt="Rectangle" class="rectangle"/>
+    <img src="img/shapes/Bean.png" alt="Bean" class="bean"/>
+    <img src="img/shapes/Ellipse.png" alt="Ellipse" class="ellipse"/>
+    <img src="img/shapes/Arrow.png" alt="Arrow" class="arrow"/>
+
+    <!-- The intro text -->
+    <div class="main-container">
+    <div class="container-fluid mtop-large">
+        <div class="row">
+          <div class="col-sm">
+            <img src="img/art/HighmarkPhoto.jpg" alt="Photo of Me" class="w-75 personal-photo"/>
+          </div>
+          <div class="col-sm">
+            <p class="project-heading">Thanks for visiting my portfolio! <br> Here’s a little about me...</p>
+            <p class="project-subheading">I am currently a sophomore at Carnegie Mellon University majoring in Information Systems and minoring in Game Design as well as Human-Computer Interaction. From a young age, I've always prided myself on my creativity and imagination. I want to mix these strengths with innovations in modern technology in order to build virtual worlds, focusing on enchanced user experience. To achieve this goal, I look forward to exploring the fields of UX design, UI design, and game design.
+
+              In my free time, I enjoy video games, skateboarding, watching rom coms, reading Calvin and Hobbes comics, and learning random topics from Wikipedia articles.
+              
+              My inspiration is Randy Pausch, a past professor at Carnegie Mellon who tragically died of pancreatic cancer in 2006. Knowing his death was inevitable, Pausch gave one last speech, famously known as "The Last Lecture: Really Achieving Your Childhood Dreams". In his speech, he talks about working for Disney to develop experiences such as Pirates of the Caribbean and Aladdin themed and Virtual Reality rides, along with other inspirational ventures. He describes a goal of his as "enabling the childhood dream's of others", and watching the lecture, he has inspired me to make that a goal of mine as well.</p>
+
+          </div>
+        </div>
+    </div>
+    </div>
+
+  </body>
+</html>

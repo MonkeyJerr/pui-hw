@@ -1,0 +1,46 @@
+/* Logo for navigation bar */
+#nav-main {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0; /* Position the navbar at the top of the page */
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 black;
+}
+
+#logo{
+    height: 50px;
+    width: 110px;
+}
+
+#nav-main ul {
+    display: inline-block;
+}
+
+ul li{
+    display: inline; 
+    padding:10px;
+    font-size:20px; 
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color: #DF6631;
+}
+
+
+
+#nav-container {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+

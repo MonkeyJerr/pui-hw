@@ -1,0 +1,124 @@
+.art-title {
+    font-size: 1.7vw;
+    font-style: bold;
+}
+.art-subtitle {
+    font-size: 1vw;
+    font-style: italic;
+}
+.statue-of-liberty {
+    left: 200px;
+    top: 450px;
+}
+
+.rhino-heaven {
+    right: 150px;
+    top: 700px;
+}
+
+.rhino-heaven img {
+    height: 30vw;
+}
+
+.self-portrait {
+    left: 500px;
+    top: 1900px;
+    z-index: 1;
+}
+
+.self-portrait img {
+    height: 25vw;
+}
+
+.table-still-life {
+    right: 500px;
+    top: 500px;
+}
+
+.table-still-life img {
+    height: 25vw;
+}
+
+.flower-still-life {
+    right: 300px;
+    top: 1300px;
+}
+
+.stomach-ache {
+    left: 75px;
+    top: 1100px;
+}
+
+.stomach-ache img {
+    height: 25vw;
+}
+
+.save-the-earth {
+    right: 120px;
+    top: 1700px;
+}
+
+.save-the-earth img {
+    height: 25vw;
+}
+
+.tire-swing {
+    left: 200px;
+    top: 1600px;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.gallery__item img {
+    object-fit: cover;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery__item img:hover {
+    transform: scale(1.1);
+}
+
+/*Image modal*/
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+}
+
+.modal img {
+    height: 75%;
+    object-fit: cover;
+}
+
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.closeBtn:hover {
+    color: rgb(255, 255, 255);
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
