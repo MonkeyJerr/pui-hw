@@ -1,32 +1,31 @@
+
 const images = document.querySelectorAll(".gallery__item img");
-let imgIndex
-let imgSrc;
+let picSrc;
+
 // get images src onclick
-images.forEach((img, i) => {
-    img.addEventListener("click", (e) => {
-        imgSrc = e.target.src;
+images.forEach((pic, index) => {
+    pic.addEventListener("click", (e) => {
+        picSrc = e.target.src;
         //run modal function
-        imgModal(imgSrc);
-        //index of the next image
-        imgIndex = i;
+        imgModal(picSrc);
     });
 });
 //creating the modal
 let imgModal = (src) => {
-    const modal = document.createElement("div");
-    modal.setAttribute("class", "modal");
-    //add modal to the parent element 
-    document.querySelector(".main").append(modal);
-    //adding image to modal
+    const imageModal = document.createElement("div");
+    imageModal.setAttribute("class", "modal");
+    //add modal
+    document.querySelector(".main").append(imageModal);
+    //put image in the modal
     const newImage = document.createElement("img");
     newImage.setAttribute("src", src);
-    //creating the close button
+    //close button code
     const closeBtn = document.createElement("i");
     closeBtn.setAttribute("class", "fas fa-times closeBtn");
-    //close function
+    //take out modal after you press X
     closeBtn.onclick = () => {
-        modal.remove();
+        imageModal.remove();
     };
 
-modal.append(newImage, closeBtn);
+imageModal.append(newImage, closeBtn);
 };

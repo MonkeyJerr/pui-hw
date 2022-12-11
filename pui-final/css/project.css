@@ -1,0 +1,19 @@
+.project-page-container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.project-photo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mtop-large {
+    margin-top: 200px;
+}
+
+.mtop-medium {
+    margin-top: 7vw;
+}

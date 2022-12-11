@@ -1,51 +1,62 @@
-var TxtRotate = function(el, toRotate, period) {
-    this.toRotate = toRotate;
+var textChange = function(el, target, interval) {
+  //starting parameters
+
+    this.target = target;
     this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
+    this.loopCount = 0;
+    this.interval = parseInt(interval, 10) || 2000;
+    this.placeholder = '';
     this.tick();
-    this.isDeleting = false;
+    this.isBackspace = false;
   };
+
+    //tick timing
+
+  textChange.prototype.tick = function() {
+    var i = this.loopCount % this.target.length;
+    var fullTxt = this.target[i];
   
-  TxtRotate.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-  
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+        //string splicing the word
+
+    if (this.isBackspace == true) {
+      this.placeholder = fullTxt.substring(0, this.placeholder.length - 1);
     } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      this.placeholder = fullTxt.substring(0, this.placeholder.length + 1);
+    }
+          //adding in the spliced section
+
+    this.el.innerHTML = '<span class="wrap">'+ this.placeholder+'</span>';
+  
+    var dummy = this;
+          //this decides how fast the typing will be occurring. it is random
+
+    var timingNum = 200 - Math.random() * 100;
+  
+    if (this.isBackspace == true) { 
+      timingNum /= 2; 
     }
   
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-  
-    var that = this;
-    var delta = 300 - Math.random() * 100;
-  
-    if (this.isDeleting) { delta /= 2; }
-  
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
+    if ((!this.isBackspace == true) && (this.placeholder === fullTxt)) {
+      timingNum = this.interval;
+      this.isBackspace = true;
+    } else if ((this.isBackspace) && (this.placeholder === '')) {
+      this.isBackspace = false;
+      this.loopCount++;
+      timingNum = 500;
     }
   
     setTimeout(function() {
-      that.tick();
-    }, delta);
+      dummy.tick();
+    }, timingNum);
   };
   
   window.onload = function() {
     var elements = document.getElementsByClassName('txt-rotate');
-    for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-rotate');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    for (var i=0; i < elements.length; i++) {
+      var target = elements[i].getAttribute('data-rotate');
+      var interval = elements[i].getAttribute('data-period');
+      if (target) {
+        new textChange(elements[i], JSON.parse(target), interval);
       }
     }
     // INJECT CSS

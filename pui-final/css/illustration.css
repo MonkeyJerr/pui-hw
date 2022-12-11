@@ -1,3 +1,15 @@
+.illustration-title {
+    font-size: 35px;
+}
+.illustration-container {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.illustration-container span {
+    color: #DF6631
+ }
+
 .art-title {
     font-size: 1.7vw;
     font-style: bold;
@@ -9,11 +21,14 @@
 .statue-of-liberty {
     left: 200px;
     top: 450px;
+    position: absolute;
 }
 
 .rhino-heaven {
     right: 150px;
     top: 700px;
+    position: absolute;
+
 }
 
 .rhino-heaven img {
@@ -24,6 +39,8 @@
     left: 500px;
     top: 1900px;
     z-index: 1;
+    position: absolute;
+
 }
 
 .self-portrait img {
@@ -33,6 +50,8 @@
 .table-still-life {
     right: 500px;
     top: 500px;
+    position: absolute;
+
 }
 
 .table-still-life img {
@@ -42,11 +61,15 @@
 .flower-still-life {
     right: 300px;
     top: 1300px;
+    position: absolute;
+
 }
 
 .stomach-ache {
     left: 75px;
     top: 1100px;
+    position: absolute;
+
 }
 
 .stomach-ache img {
@@ -56,6 +79,8 @@
 .save-the-earth {
     right: 120px;
     top: 1700px;
+    position: absolute;
+
 }
 
 .save-the-earth img {
@@ -65,6 +90,8 @@
 .tire-swing {
     left: 200px;
     top: 1600px;
+    position: absolute;
+
 }
 
 .img-container {
@@ -121,4 +148,102 @@
     to {
         transform: scale(1);
     }
+}
+
+@media (max-width: 576px) {
+    .illustration-title {
+        font-size: 30px;
+    }
+    .illustration-container {
+        margin-top: 200px;
+        margin-left: 30px;
+        margin-bottom: 75px;
+    }
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+    .tire-swing {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .save-the-earth {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .save-the-earth img{
+        width: 100%;
+        height: auto;
+    }
+    .statue-of-liberty {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .statue-of-liberty img {
+        width: 100%;
+        height: auto;
+    }
+    .rhino-heaven {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .rhino-heaven img {
+        width: 100%;
+        height: auto;
+    }
+    .stomach-ache {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .stomach-ache img {
+        width: 100%;
+        height: auto;
+    }
+    .table-still-life {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .table-still-life img {
+        width: 100%;
+        height: auto;
+    }
+    .flower-still-life {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .flower-still-life img {
+        width: 100%;
+        height: auto;
+    }
+    .self-portrait {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .self-portrait img {
+        width: 100%;
+        height: auto;
+    }
+
+    .art-title {
+        font-size: 25px;
+        font-style: bold;
+    }
+    .art-subtitle {
+        font-size: 15px;
+        font-style: italic;
+    }
+
+
 }

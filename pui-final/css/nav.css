@@ -1,5 +1,15 @@
 /* Logo for navigation bar */
-#nav-main {
+nav {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    background: transparent;
+    transition: background 250ms ease-in;
+}
+
+.nav-scrolled {
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -7,7 +17,10 @@
     overflow: hidden;
     background-color: white;
     box-shadow: 0 2px 4px 0 black;
+
 }
+
+
 
 #logo{
     height: 50px;
@@ -25,15 +38,19 @@ ul li{
 }
 
 ul li a {
-    color: black;
     text-decoration: none;
-}
-
-ul li a:hover{
     color: #DF6631;
 }
 
+ul li a:hover{
+    text-decoration: none;
+    color: #DF6631;
+}
 
+.nav-scrolled ul li a {
+    text-decoration: none;
+    color: black;
+}
 
 #nav-container {
     margin-left: 50px;
@@ -42,5 +59,17 @@ ul li a:hover{
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+}
+
+@media (max-width: 576px) {
+    #nav-container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #logo{
+        height: 40px;
+        width: 80px;
+    }
 }
 

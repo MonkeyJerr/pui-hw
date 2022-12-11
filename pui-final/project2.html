@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexander Ma's Project 2 Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/project.css">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+
+
+
+    <!-- JS Query for Navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+  <!-- Nav Bar -->
+  <div id="navigation"></div>
+    <script> 
+        $(function(){
+            $("#navigation").load("nav.html"); 
+        });
+    </script>
+
+  <body>
+    <div class="project-page-container">
+        <div class="container-fluid mtop-large">
+            <div class="row">
+              <div class="col-sm">
+                <img src="img/SpotifyImg.png" alt="Project Image" class="w-100 project-photo"/>
+              </div>
+              <div class="col-sm">
+                <p class="project-heading lato-bold header-graphic">Jamsesh Application</p>
+                <p class="project-subheading">JamSesh is an interactive application where users can visualize data from their personal Spotify account, such as top songs, top tracks, top genres, and even see what song is playing on their Spotify in real time. This is a personal project that was created through the use ReactJS and the Spotify Web API. </p>
+              </div>
+            </div>
+            <div class="row mtop-medium">
+                <div class="col-4 project-heading lato-regular">
+                  <p>Project Overview</p>
+                </div>
+                <div class="col-xl">
+                    <div>
+                        <p class="lato-bold">Team/Role</p>
+                        <p>Alexander Ma - Frontend Developer, UX/Graphic Designer<br>
+                            Michelle Deng - Backend Developer​</p>
+                    </div>
+                    <div>
+                        <p class="lato-bold">Timeline</p>
+                        <p>9 weeks (July 2022 - September 2022)
+                        </p>
+                    </div>
+                    <div>
+                        <p class="lato-bold">My Contributions</p>
+                        <p>1. Designing all the graphics with Figma to fit the "vintage computer aesthetic" that we were going for
+
+                            2. Wireframing page layouts to discover unique ways for displaying personal Spotify information while keeping user engagement high
+                            
+                            3. Translating prototypes into comprehensive code with ReactJS, including the dragging and clicking user actions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mtop-medium">
+                <video width="100%" controls>
+                    <source src="img/JamSesh1Vid.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="row mtop-medium d-flex flex-column align-items-center">
+                <video width="50%" controls>
+                    <source src="img/JamSeshArtistsVid.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="row mtop-medium d-flex flex-column align-items-center" controls>
+                <video width="50%">
+                    <source src="img/JamSesh3Vid.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>

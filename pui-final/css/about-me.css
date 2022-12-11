@@ -1,13 +1,33 @@
 .personal-photo {
     margin-left: auto;
     margin-right: auto;
+    width: 75%;
 }
 
 .mtop-large {
     margin-top: 200px;
 }
 
+.mtop-medium {
+    margin-top: 100px;
+}
+
 .main-container {
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-bottom: 10vw;
 }
+
+.row-gap {
+    gap: 2vw;
+}
+
+@media (max-width: 576px) {
+    .personal-photo {
+        width: 100%;
+    }
+
+}
+
+
+
