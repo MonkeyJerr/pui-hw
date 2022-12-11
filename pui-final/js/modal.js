@@ -2,11 +2,10 @@
 const images = document.querySelectorAll(".gallery__item img");
 let picSrc;
 
-// get images src onclick
+// get the images
 images.forEach((pic, index) => {
     pic.addEventListener("click", (e) => {
         picSrc = e.target.src;
-        //run modal function
         imgModal(picSrc);
     });
 });

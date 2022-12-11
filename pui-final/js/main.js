@@ -59,7 +59,7 @@ var textChange = function(el, target, interval) {
         new textChange(elements[i], JSON.parse(target), interval);
       }
     }
-    // INJECT CSS
+    // add the css
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
